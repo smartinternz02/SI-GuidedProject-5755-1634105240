@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  h1{
+    color: rgb(38, 0, 255);
+  }
+  .image {
+    background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80');
+    height: 100%; 
+
+/* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body{
+    height: 100%;
+    margin: 0;
+  }
+  html{
+    height: 100%;
+    margin :0;
+  }
+  
+
+
+</style></head>
+
+
+<body>
+
+  <div class="image" >
+
+<h1>Insurance prediction</h1>
+
+<p>The select element is used to create a drop-down list.</p>
+
+<form action="/predict" method="POST">
+  
+  <label for="age">Select age:</label>
+  <select name="age" id="age">
+    
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="1">51</option>
+    <option value="2">52</option>
+    <option value="3">53</option>
+    <option value="4">54</option>
+    <option value="5">55</option>
+    <option value="6">56</option>
+    <option value="7">57</option>
+    <option value="8">58</option>
+    <option value="9">59</option>
+    <option value="10">60</option>
+    <option value="11">61</option>
+    <option value="12">62</option>
+    <option value="13">63</option>
+    <option value="14">64</option>
+  </select>
+  <br><br>
+
+  <label for="sex">Choose a Gender:</label>
+  <select name="sex" id="sex">
+    <option value="female">Female</option>
+    <option value="male">Male</option>
+  </select>
+  <br><br>
+
+  <label for="bmi">BMI(Maximum range is 54):</label>
+  <input type="number" id="bmi" name="bmi"><br><br>
+  </select>
+  <br><br>
+  <label for="children">Children:</label>
+  <input type="number" id="children" name="children"><br><br>
+    
+  </select>
+  <br><br>
+
+  <label for="smoker">smoker:</label>
+  <select name="smoker" id="smoker">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+  <br><br>
+
+  <label for="region">Choose region:</label>
+  <select name="region" id="region">
+    <option value=" southwest"> southwest</option>
+    <option value=" southeast"> southeast</option>
+    <option value=" northwest"> northwest</option>
+    <option value=" northeast"> northeast</option>
+  </select>
+  <br><br>
+
+   
+  
+  <input type="submit" value="Submit">
+</form>
+
+<h1> {{ prediction_text }}</h1>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
+</html>
